@@ -18,7 +18,7 @@ sed -i.bak \
 sudo apt install openssh-server openssh-client
 
 # Install essential software
-sudo apt install build-essential lldb gdb vim emacs net-tools wget w3m wireshark ffmpeg apt-transport-https ca-certificates software-properties-common cmake automake unzip bubblewrap tree dirmngr llvm gimp
+sudo apt install build-essential lldb gdb vim emacs xclip net-tools wget w3m wireshark ffmpeg apt-transport-https ca-certificates software-properties-common cmake automake unzip bubblewrap tree dirmngr llvm gimp
 
 # Install node
 ## Install nvm (Node Version Manager)
@@ -205,6 +205,7 @@ sudo tar -xf ./flutter.tar.xz -C /usr/bin/
 rm ./flutter.tar.xz
 echo '# Flutter SDK Path' >> ~/.zshrc
 echo 'export PATH="/usr/bin/flutter/bin:$PATH"' >> ~/.zshrc
+echo "" >> ~/.zshrc
 
 # Install WebAssembly
 git clone https://github.com/emscripten-core/emsdk.git
@@ -218,20 +219,29 @@ source /opt/emsdk/emsdk_env.sh
 echo "# EMSDK" >> ~/.zshrc
 echo "export EMSDK_QUIET=1" >> ~/.zshrc
 echo "source "/opt/emsdk/emsdk_env.sh"" >> ~/.zshrc
+echo "" >> ~/.zshrc
 
-# Install Postman CLI
-curl -o- "https://dl-cli.pstmn.io/install/linux64.sh" | sh
+# Install Postman
+snap install postman
+
+# Install Golang
+wget -O go1.22.5.linux-amd64.tar.gz https://go.dev/dl/go1.22.5.linux-amd64.tar.gz
+rm -rf /usr/local/go
+sudo tar -C /usr/local -xzf go1.22.5.linux-amd64.tar.gz
+echo "# Golang" >> ~/.zshrc
+echo "export PATH=$PATH:/usr/local/go/bin" >> ~/.zshrc
+echo "" >> ~/.zshrc
 
 # Install from its website
-Eclipse
+# Eclipse
 
 # Install from Chrome PWA Installer
-WhatsApp
-Teams
-Twitter (X)
+# WhatsApp
+# Teams
+# Twitter (X)
 
 # Install using UBUNTU SOFTWARE
-Startup Disk Creator (with dotted lines in image)
-LogSeq
-Draw.io
-LibreOffice*
+# Startup Disk Creator (with dotted lines in image)
+# LogSeq
+# Draw.io
+# LibreOffice*
