@@ -126,7 +126,7 @@ sudo apt-get install swi-prolog
 curl -fsSL https://install.julialang.org | sh
 
 # Install PHP
-sudo apt install aphp-common libapache2-mod-php php-cli
+sudo apt install php-common libapache2-mod-php php-cli
 
 # Install Composer
 php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
